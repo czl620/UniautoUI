@@ -1,0 +1,6 @@
+framework module UniautoUI {
+  umbrella header "UniautoUI.h"
+
+  export *
+  module * { export * }
+}
