@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.name         = 'UniautoUI'
 
 #版本号
-s.version      = '1.0.0'
+s.version      = '1.0.1'
 
 #许可证
 s.license      = { :type => 'MIT' }
@@ -44,5 +44,6 @@ s.dependency  'SDWebImage', '~> 5.0.6'
 s.dependency  'MJRefresh', '~> 3.1.14'
 s.dependency  'Toast', '~> 3.1.0'
 s.dependency  'DZNEmptyDataSet', '~> 1.8.1'
+s.dependency  'UniautoCore', '~> 1.0.0'
 
 end

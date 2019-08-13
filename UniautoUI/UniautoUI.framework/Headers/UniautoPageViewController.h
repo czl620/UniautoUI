@@ -39,10 +39,6 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers pageViewStyle:(UniautoPageViewStyle)style;
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers pageViewStyle:(UniautoPageViewStyle)style segmentType:(UniautoPageSegmentStyle)segmentType;
 
-@property(nonatomic,copy) NSArray *viewControllers;
-@property(nonatomic,assign) UniautoPageViewStyle pageViewStyle;
-@property(nonatomic,assign) UniautoPageSegmentStyle pageSegmentStyle;
-
 /**
  字体默认颜色值，不设置默认为black
  */
@@ -70,5 +66,7 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
 @property(nonatomic) NSInteger numberOfLines;
 
 - (void)scrollToIndex:(NSInteger)index animated:(BOOL)animated;
+
+- (void)setViewControllers:(nullable NSArray<UIViewController *> *)viewControllers animated:(BOOL)animated;
 
 @end
