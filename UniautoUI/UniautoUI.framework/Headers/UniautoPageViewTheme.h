@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) CGFloat indicatorHeight;
 @property(nonatomic, strong) UIColor *indicatorColor;
 
+@property(nonatomic, strong) UIColor *itemColor;
+@property(nonatomic, strong) UIColor *itemSelectedColor;
+
 @end
 
 NS_ASSUME_NONNULL_END
