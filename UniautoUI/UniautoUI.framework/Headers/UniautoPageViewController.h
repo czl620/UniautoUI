@@ -58,6 +58,11 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
  */
 @property(nonatomic, strong) UIColor *tintColor;
 
+@property(nonatomic) CGFloat indicatorWidth;
+@property(nonatomic) CGFloat indicatorHeight;
+@property(nonatomic, strong) UIColor *indicatorColor;
+
+
 @property(nonatomic, assign, readonly) NSInteger selectedIndex;
 
 @property(nonatomic, weak) id<UniautoPageViewControllerDelegate> delegate;
