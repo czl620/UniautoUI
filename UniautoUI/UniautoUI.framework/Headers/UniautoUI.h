@@ -76,6 +76,7 @@
 #import <UniautoUI/UniautoFormTextViewCell.h>
 #import <UniautoUI/UniautoPhoneCodeCell.h>
 
+#import <UniautoUI/UniautoPageViewTheme.h>
 
 @interface UniautoUI : NSObject
 

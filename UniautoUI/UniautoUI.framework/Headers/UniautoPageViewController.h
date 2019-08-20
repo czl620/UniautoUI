@@ -7,6 +7,7 @@
 //
 
 #import "UniautoViewController.h"
+#import "UniautoPageViewTheme.h"
 
 typedef NS_ENUM(NSUInteger, UniautoPageViewStyle) {
     UniautoPageViewStyleDefault = 0,    // 在View顶部
@@ -29,6 +30,7 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
 @protocol UniautoPageViewControllerDataSource <NSObject>
 @optional
 - (CGFloat)pageBarHeightForPageViewController:(UniautoPageViewController *)pageViewController;
+- (UniautoPageViewTheme *)themeOfPageViewController:(UniautoPageViewController *)pageViewController;
 @end
 
 /**
@@ -41,26 +43,9 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers pageViewStyle:(UniautoPageViewStyle)style segmentType:(UniautoPageSegmentStyle)segmentType;
 
 /**
- 字体默认颜色值，不设置默认为black
- */
-@property(nonatomic, strong) UIColor *color;
-
-/**
- 选中字体的颜色，不设置默认为blue，底部指示器也是该颜色值
- */
-@property(nonatomic, strong) UIColor *selectedColor;
-
-@property(nonatomic, strong) UIFont *font;
-@property(nonatomic, strong) UIFont *selectedFont;
-
-/**
  选项卡背景色
  */
 @property(nonatomic, strong) UIColor *tintColor;
-
-@property(nonatomic) CGFloat indicatorWidth;
-@property(nonatomic) CGFloat indicatorHeight;
-@property(nonatomic, strong) UIColor *indicatorColor;
 
 
 @property(nonatomic, assign, readonly) NSInteger selectedIndex;
