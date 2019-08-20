@@ -10,7 +10,8 @@
 
 typedef NS_ENUM(NSUInteger, UniautoPageViewStyle) {
     UniautoPageViewStyleDefault = 0,    // 在View顶部
-    UniautoPageViewStyleNavigationBar   // 在navigationBar上
+    UniautoPageViewStyleNavigationBar,  // 在navigationBar上
+    UniautoPageViewStyleSegmentControl  // 在navigationBar上
 };
 
 typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
