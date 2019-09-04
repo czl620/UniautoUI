@@ -12,5 +12,6 @@
 @interface UniautoFormImageRow : UniautoFormRow
 
 @property(nonatomic, assign) CGFloat cornerRadius;
+@property(nonatomic, strong) UIImage *placeholderImage;
 
 @end

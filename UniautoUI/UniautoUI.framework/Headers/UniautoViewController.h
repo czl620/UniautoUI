@@ -27,6 +27,11 @@
  */
 - (UIImage *)backItemImage;
 
+/**
+ 是否隐藏导航栏
+ */
+- (BOOL)navigationBarHidden;
+
 @end
 
 /**
