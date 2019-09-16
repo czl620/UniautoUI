@@ -35,8 +35,8 @@
  @param blendMode 混合模式
  @return 生成图片
  */
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode;
-- (UIImage *)imageWithTintColor:(UIColor *)tintColor;
+- (UIImage *)u_imageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode;
+- (UIImage *)u_imageWithTintColor:(UIColor *)tintColor;
 
 
 /**

@@ -23,14 +23,14 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
 @class UniautoPageViewController;
 @protocol UniautoPageViewControllerDelegate <NSObject>
 @optional
-- (void)pageViewController:(UniautoPageViewController *)pageViewController didSelectAtIndex:(NSInteger)index;
-- (void)pageViewController:(UniautoPageViewController *)pageViewController didScrollToIndex:(NSInteger)index;
+- (void)pageViewController:(UniautoPageViewController *_Nullable)pageViewController didSelectAtIndex:(NSInteger)index;
+- (void)pageViewController:(UniautoPageViewController *_Nullable)pageViewController didScrollToIndex:(NSInteger)index;
 @end
 
 @protocol UniautoPageViewControllerDataSource <NSObject>
 @optional
-- (CGFloat)pageBarHeightForPageViewController:(UniautoPageViewController *)pageViewController;
-- (UniautoPageViewTheme *)themeOfPageViewController:(UniautoPageViewController *)pageViewController;
+- (CGFloat)pageBarHeightForPageViewController:(UniautoPageViewController *_Nullable)pageViewController;
+- (UniautoPageViewTheme *_Nullable)themeOfPageViewController:(UniautoPageViewController *_Nullable)pageViewController;
 @end
 
 /**
@@ -38,20 +38,20 @@ typedef NS_ENUM(NSUInteger, UniautoPageSegmentStyle) {
  */
 @interface UniautoPageViewController : UniautoViewController
 
-- (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers;
-- (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers pageViewStyle:(UniautoPageViewStyle)style;
-- (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers pageViewStyle:(UniautoPageViewStyle)style segmentType:(UniautoPageSegmentStyle)segmentType;
+- (instancetype _Nullable )initWithViewControllers:(NSArray<UIViewController *> *_Nonnull)viewControllers;
+- (instancetype _Nullable )initWithViewControllers:(NSArray<UIViewController *> *_Nonnull)viewControllers pageViewStyle:(UniautoPageViewStyle)style;
+- (instancetype _Nullable )initWithViewControllers:(NSArray<UIViewController *> *_Nullable)viewControllers pageViewStyle:(UniautoPageViewStyle)style segmentType:(UniautoPageSegmentStyle)segmentType;
 
 /**
  选项卡背景色
  */
-@property(nonatomic, strong) UIColor *tintColor;
+@property(nonatomic, strong) UIColor * _Nullable tintColor;
 
 
 @property(nonatomic, assign, readonly) NSInteger selectedIndex;
 
-@property(nonatomic, weak) id<UniautoPageViewControllerDelegate> delegate;
-@property(nonatomic, weak) id<UniautoPageViewControllerDataSource> dataSource;
+@property(nonatomic, weak) id<UniautoPageViewControllerDelegate> _Nullable delegate;
+@property(nonatomic, weak) id<UniautoPageViewControllerDataSource> _Nullable dataSource;
 
 
 @property(nonatomic) NSInteger numberOfLines;

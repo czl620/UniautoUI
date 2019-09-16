@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, UniautoFormRowAccessoryType) {
     UniautoFormRowAccessoryNone = UITableViewCellAccessoryNone,
     UniautoFormRowAccessoryDisclosureIndicator = UITableViewCellAccessoryDisclosureIndicator,
     UniautoFormRowAccessoryDetailDisclosureButton = UITableViewCellAccessoryDetailDisclosureButton,
-    UniautoFormRowAccessoryUITableViewCellAccessoryCheckmark = UITableViewCellAccessoryCheckmark,
+    UniautoFormRowAccessoryCheckmark = UITableViewCellAccessoryCheckmark,
     UniautoFormRowAccessoryDetailButton = UITableViewCellAccessoryDetailButton,
     UniautoFormRowAccessorySpace
 };
@@ -49,6 +49,7 @@ typedef NS_ENUM(NSInteger, UniautoFormRowAccessoryType) {
 @property(nonatomic, strong) id rowValue;
 
 @property(nonatomic, assign) UniautoFormRowAccessoryType accessoryType;
+@property(nonatomic, strong) UIImage *accessoryImage;
 
 @property(nonatomic, copy) void (^selectionHandler)(UniautoFormRow *row, UniautoFormCell *cell);
 @property(nonatomic, copy) void (^valueChangedHandler)(UniautoFormRow *row, UniautoFormCell *cell);
